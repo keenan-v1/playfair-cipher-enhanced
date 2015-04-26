@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Playfair Cipher - Extended, by Jonathan Walker</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type='text/javascript' src='./js/playfair-enhanced.js'></script>
+        <link rel="stylesheet" type="text/css" href="./css/playfair-enhanced.css"></link>
+    </head>
+    <body>
+        <div id="allowedCharacters" class="cipherText"></div>
+        <p>Input a keyword or keyphrase below. You can use nearly any alpha-numeric characters, including most punctuation. Duplicate characters are ignored when generating the table. The value you input here will determine the overall strength of the cipher. A short or unvaried keyword or phrase will make it easier to crack the code.</p>
+        <input id="keyword" value="198%H3Ll0-Wor1d!:)" class="cipherText"></input>
+        <br />
+        <button id="generateKeytable" class="cipherBtn">Generate Key Table</button>
+        <button id="regenerateKeytable" class="cipherBtn" style="display: none">Regenerate Key Table</button>
+        <br />
+        <span id="AfterGen" style="display: none">
+            <div id="keyTable" class="cipherKeyTable"></div>
+            <p>
+                After clicking a button below, the digraph shows what the code does to your message before running it through the cipher. Spaces are converted to underscores and an asterix is used to break up duplicate letter pairs and to fill out uneven pairs. The asterix is trimmed out after deciphering and underscores are returned to spaces.
+            </p>
+            <pre id="digraph"></pre>
+            <textarea id="en" cols="50" rows="5" class="cipherText"></textarea>
+            <br/>
+            <button id="encipher" class="cipherBtn">Encipher</button><br />
+            <br />
+            <textarea id="de" cols="50" rows="5" class="cipherText"></textarea>
+            <br/>
+            <button id="decipher" class="cipherBtn">Decipher</button>
+        </span>
+    </body>
+</html>
